@@ -1,0 +1,10 @@
+import random
+import string
+
+min_length = 10
+max_length = 25
+
+results = 5
+
+for i in range(results):
+  print(''.join(random.choices(string.digits, k=random.randint(min_length,max_length))))
