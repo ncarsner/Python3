@@ -28,7 +28,7 @@ for n in range(1,101):
     elif roundtens(n) == tens:
         print(n, sep, ttxt)
     else:
-# will print only quantified entries
+# will print only qualified entries
         next
 # will print all numbers and results in range
         # print(n)
