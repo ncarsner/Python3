@@ -1,0 +1,19 @@
+import random
+
+# number of selections
+n = 5
+# maximum number in pool
+m = 70
+
+lotteryNumbers = []
+
+for i in range (n):
+  number = random.randint(1, m)
+  while number in lotteryNumbers:
+    number = random.randint(1, m)
+  lotteryNumbers.append(number)
+  
+lotteryNumbers.sort()
+
+print(lotteryNumbers)
+print(sum(lotteryNumbers))
