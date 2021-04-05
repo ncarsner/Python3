@@ -6,14 +6,20 @@ n = 5
 m = 70
 
 lotteryNumbers = []
+even_count, odd_count = 0, 0
 
 for i in range (n):
   number = random.randint(1, m)
   while number in lotteryNumbers:
     number = random.randint(1, m)
   lotteryNumbers.append(number)
+  if number % 2 == 0:
+    even_count += 1
+  else:
+    odd_count += 1
   
 lotteryNumbers.sort()
 
 print(lotteryNumbers)
 print(sum(lotteryNumbers))
+print(even_count,"/", odd_count, "even/odd mix")
