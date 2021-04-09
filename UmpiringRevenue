@@ -1,0 +1,30 @@
+coach_pitch = 45
+min_base = 55
+min_plate = 65
+maj_base = 60
+maj_plate = 70
+
+mpll = [
+    ['3/27', min_plate, 'y', 1]
+    ,['3/29', min_plate, 'y', 1]
+    ,['4/3', coach_pitch, 'y', 1]
+    ,['4/4', maj_plate, 'y', 2]
+    ,['4/5', min_base, 'n', 2]
+    ,['4/5', min_plate, 'n', 1]
+    ,['4/7', maj_plate, 'n', 1]
+    ,['4/8', min_plate, 'n', 1]
+    ,['4/8', min_base, 'n', 2]
+        #,[]   
+    ]
+
+owed = []
+paid = []
+
+for x in mpll:
+    if x[2] == 'y':
+        paid.append(x)
+    else:
+        owed.append(x)
+
+print(sum(i[3] for i in owed), 'games owed for $', sum(i[1] for i in owed))
+print(sum(i[3] for i in paid), 'games paid for $', sum(i[1] for i in paid))
